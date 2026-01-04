@@ -6,13 +6,13 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 14:10:25 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/01/04 14:12:37 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/01/04 15:31:52 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#include "../includes/Contact.hpp"
 
-std::string Contact::_fields_name[5] =
+std::string Contact::FieldName[5] =
 {
 	"First Name",
 	"Last Name",
@@ -25,31 +25,32 @@ std::string Contact::_fields_name[5] =
 Contact::Contact()
 {
 	for (int i = FirstName; i <= DarkestSecret; i++)
-		this->_informations[i] = std::string();
+		this->Informations[i] = std::string();
 	return;
 }
 
 Contact::~Contact()
 {
+	return ;
 }
 
-bool	Contact::set_contact()
+bool	Contact::SetContact()
 {
 	for (int i = FirstName; i <= DarkestSecret; i++)
 	{
-		std::cout << "Please enter the " << Contact::_fields_name[i] << ":\n+";
-		while ( !(std::getline(std::cin, this->_informations[i])) || this->_informations[i].length() == 0)
+		std::cout << "Please enter the " << Contact::FieldName[i] << ":\n+";
+		while ( !(std::getline(std::cin, this->Informations[i])) || this->Informations[i].length() == 0)
 		{
 			if (std::cin.eof() == true)
 			{
 				std::cout << "You Pressed ^D. Exiting phonebook now." << std::endl;
 				std::exit(0);
 			}
-			else if (this->_informations[i].length() == 0)
+			else if (this->Informations[i].length() == 0)
 			{
-				this->_informations[i].clear();
+				this->Informations[i].clear();
 				std::cout << "\033[31mEmpty contact information not allowed.\033[0m" << std::endl;
-				std::cout << "Please enter the " << Contact::_fields_name[i] << ":\n+";
+				std::cout << "Please enter the " << Contact::FieldName[i] << ":\n+";
 			}
 		}
 	}
@@ -57,16 +58,23 @@ bool	Contact::set_contact()
 	return (true);
 }
 
-void	Contact::get_contact(int index) const
-{
+void	Contact::GetContact(int index) const {
 	std::cout << "|" << std::setw(10) << index;
-	for (int i = FirstName; i <= NickName; i++)
-	{
+	for (int i = FirstName; i <= NickName; i++) {
 		std::cout << "|";
-		if (this->_informations[i].length() > 10)
-			std::cout << this->_informations[i].substr(0, 9) << ".";
+		if (this->Informations[i].length() > 10)
+			std::cout << this->Informations[i].substr(0, 9) << ".";
 		else
-			std::cout << std::setw(10) << this->_informations[i];
+			std::cout << std::setw(10) << this->Informations[i];
 	}
 	std::cout << "|" << std::endl;
+}
+
+void	Contact::DisplayContact() const {
+	std::cout << "============== Contact Details ==============" << std::endl;
+	for (int i = FirstName; i <= DarkestSecret; i++) {
+		std::cout << std::setw(15) << std::left << Contact::FieldName[i] << ": "
+				<< this->Informations[i] << std::endl;
+	}
+	std::cout << "=============================================" << std::endl;
 }
