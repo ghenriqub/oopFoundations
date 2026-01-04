@@ -6,12 +6,12 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 18:35:55 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/01/04 17:18:27 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/01/04 18:58:30 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/PhoneBook.hpp"
-#include "../includes/Contact.hpp"
+#include "PhoneBook.hpp"
+#include "Contact.hpp"
 
 void	SignalHandler(int signum) {
     if (signum == SIGINT) {
@@ -22,6 +22,14 @@ void	SignalHandler(int signum) {
         std::cout << "\n\033[33m$>\033[0mYou pressed ^C, bye!\n";
         std::exit(0);
     }
+}
+
+bool	IsOnlyWhitespace(const std::string& str) {
+	for (size_t i = 0; i < str.length(); i++) {
+		if (!std::isspace(static_cast<unsigned char>(str[i])))
+			return false;
+	}
+	return true;
 }
 
 int	main() {
@@ -48,12 +56,12 @@ int	main() {
 			run = false;
 			continue ;
 		}
-		command.clear();
 		PhoneBook.ShowInstruction();
 		std::cout << "\033[33m$>\033[0m";
 	}
-	if (run) {
+	if (run)
 		std::cout << "You pressed ^D, bye!" << command << std::endl;
-	}
+	else if (command.length() == 0 || IsOnlyWhitespace(command))
+		std::cout << "We dont accept only spaces" << command << std::endl;
 	return (0);
 }

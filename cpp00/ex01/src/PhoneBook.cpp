@@ -6,12 +6,12 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 20:15:39 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/01/04 17:18:23 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/01/04 18:58:37 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/PhoneBook.hpp"
-#include "../includes/main.hpp"
+#include "PhoneBook.hpp"
+#include "main.hpp"
 
 PhoneBook::PhoneBook(void) {
 	this->Index = 0;
@@ -60,6 +60,8 @@ void	PhoneBook::GetInformation() const {
 	int			max_contacts;
 	std::string	command;
 
+	std::signal(SIGINT, SignalHandler);
+	std::signal(SIGQUIT, SignalHandler);
 	if (this->Index == 0) {
 		std::cout << "Please add at least one contact before searching." << std::endl;
 		return ;
@@ -76,13 +78,18 @@ void	PhoneBook::GetInformation() const {
         this->Contacts[i].GetContact(i + 1);
     std::cout << "|-------------------------------------------|\n\n";
 	std::cout << "Please tell me which contact index i should show you. (0 to quit searching)\nIndex: ";
-
-	while (!(std::getline(std::cin, command)) || command.length() > 1 || command.compare("0") < 0 || command.compare("8") > 0 || (std::atoi(command.c_str()) -1 >= this->Index && this->Full == false)) {
-		std::signal(SIGINT, SignalHandler);
-		std::signal(SIGQUIT, SignalHandler);
+	while (!(std::getline(std::cin, command)) || command.length() == 0 || 
+    	IsOnlyWhitespace(command) || command.length() > 1 || 
+    	command.compare("0") < 0 || command.compare("8") > 0 || 
+    	(std::atoi(command.c_str()) - 1 >= this->Index && this->Full == false)) {
 		if (std::cin.eof() == true) {
 			std::cout << "You Pressed ^D. Exiting phonebook now." << std::endl;
 			std::exit(0);
+		}
+		else if (command.length() == 0 || IsOnlyWhitespace(command)) {
+			std::cin.clear();
+			std::cout << "Empty input not allowed.\n";
+			std::cout << "Please tell me which contact i should show you. (0 to quit searching)\nIndex: ";
 		}
 		else if (command.length() > 1 || command.compare("0") < 0 || command.compare("8") > 0) {
 			std::cin.clear();

@@ -6,19 +6,27 @@
 #    By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/03 15:32:12 by ghenriqu          #+#    #+#              #
-#    Updated: 2026/01/04 17:20:29 by ghenriqu         ###   ########.fr        #
+#    Updated: 2026/01/04 18:58:45 by ghenriqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # program name
 NAME = phonebook
+
 SRC = 	src/main.cpp \
 		src/PhoneBook.cpp \
 		src/Contact.cpp
 
+HEADERS =	includes/Contact.hpp \
+			includes/PhoneBook.hpp \
+			includes/main.hpp
+
 # compiling flags:
 CC = c++
+
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+
+INCLUDES = -I includes
 
 # files and objects:
 OBJ = $(SRC:.cpp=.o)
@@ -37,7 +45,7 @@ clean:
 	@echo "\033[0;32mClean ✓\033[m"
 
 %.o: %.cpp
-	@$(CC) $(CPPFLAGS) -c $< -o $@
+	@$(CC) $(CPPFLAGS) $(INCLUDES) -c $< -o $@
 
 fclean: clean
 	@$(RM) $(NAME)
