@@ -6,7 +6,7 @@
 #    By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/11 17:05:28 by ghenriqu          #+#    #+#              #
-#    Updated: 2026/01/11 19:05:51 by ghenriqu         ###   ########.fr        #
+#    Updated: 2026/01/11 19:21:06 by ghenriqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,14 +17,12 @@ SRC =	main.cpp \
 		Zombie.cpp \
 		ZombieHorde.cpp
 
-HEADERS =	Zombie.hpp
+HEADERS = Zombie.hpp
 
 # compiling flags:
 CC = c++
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-
-INCLUDES = -I includes
 
 # files and objects:
 OBJ = $(SRC:.cpp=.o)
@@ -43,7 +41,7 @@ clean:
 	@echo "\033[0;32mClean ✓\033[m"
 
 %.o: %.cpp
-	@$(CC) $(CPPFLAGS) $(INCLUDES) -c $< -o $@
+	@$(CC) $(CPPFLAGS) -c $< -o $@
 
 fclean: clean
 	@$(RM) $(NAME)
