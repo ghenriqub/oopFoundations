@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/11 18:54:56 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/01/17 16:36:03 by ghenriqu         ###   ########.fr       */
+/*   Created: 2026/01/17 19:14:19 by ghenriqu          #+#    #+#             */
+/*   Updated: 2026/01/18 14:13:37 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-Zombie	*zombieHorde(int N, std::string name) {
-	if (N < 1) {
-		std::cout << "A Horde has at least 1 Zombie." << std::endl;
-		return NULL;
-	}
-	Zombie	*horde = new Zombie[N];
-	if (horde == NULL) {
-		std::cout << "Allocation of the horde failed." << std::endl;
-		return NULL;
-	}
-	for (int i = 0; i < N; i++)
-		horde[i].setName(name);
-	return horde;
+Weapon::Weapon(std::string newType) {
+	this->setType =;
+}
+
+Weapon::~Weapon(void) {
+	std::cout << this->getType() << " dropped to the floor and broke." << std::endl;
+}
+
+const std::string	Weapon::getType(void) {
+	return this->type;
+}
+
+void	Weapon::setType(std::string newType) {
+	this->type = newType;
 }

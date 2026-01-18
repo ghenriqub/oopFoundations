@@ -6,23 +6,20 @@
 #    By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/11 17:05:36 by ghenriqu          #+#    #+#              #
-#    Updated: 2026/01/11 19:20:44 by ghenriqu         ###   ########.fr        #
+#    Updated: 2026/01/17 16:47:09 by ghenriqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # program name
 NAME = BraiiiiiiinnnzzzZ
-
 SRC =	main.cpp \
 		Zombie.cpp \
 		NewZombie.cpp \
 		RandomChump.cpp
-
 HEADERS = Zombie.hpp
 
 # compiling flags:
 CC = c++
-
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # files and objects:

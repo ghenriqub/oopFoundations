@@ -6,22 +6,23 @@
 #    By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/11 17:05:15 by ghenriqu          #+#    #+#              #
-#    Updated: 2026/01/11 19:37:10 by ghenriqu         ###   ########.fr        #
+#    Updated: 2026/01/17 17:09:24 by ghenriqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # program name
-NAME = ZombieHorde
+NAME = unnecessary_violence
 
 SRC =	main.cpp \
-		Zombie.cpp \
-		ZombieHorde.cpp
-
-HEADERS = Zombie.hpp
+		HumanA.cpp \
+		HumanB.cpp \
+		Weapon.cpp
+HEADERS =	HumanA.hpp \
+			HumanB.hpp \
+			Weapon.hpp
 
 # compiling flags:
 CC = c++
-
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # files and objects:

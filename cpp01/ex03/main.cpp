@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/11 18:54:56 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/01/17 16:36:03 by ghenriqu         ###   ########.fr       */
+/*   Created: 2026/01/17 17:03:34 by ghenriqu          #+#    #+#             */
+/*   Updated: 2026/01/17 18:20:28 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-Zombie	*zombieHorde(int N, std::string name) {
-	if (N < 1) {
-		std::cout << "A Horde has at least 1 Zombie." << std::endl;
-		return NULL;
+int	main(void)
+{
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
 	}
-	Zombie	*horde = new Zombie[N];
-	if (horde == NULL) {
-		std::cout << "Allocation of the horde failed." << std::endl;
-		return NULL;
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
 	}
-	for (int i = 0; i < N; i++)
-		horde[i].setName(name);
-	return horde;
+	return (0);
 }

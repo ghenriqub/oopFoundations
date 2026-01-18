@@ -6,19 +6,17 @@
 #    By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/11 17:05:22 by ghenriqu          #+#    #+#              #
-#    Updated: 2026/01/11 19:35:38 by ghenriqu         ###   ########.fr        #
+#    Updated: 2026/01/17 16:37:28 by ghenriqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 # program name
 NAME = memoryExamples
-
 SRC =	main.cpp
 
 # compiling flags:
 CC = c++
-
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # files and objects:
