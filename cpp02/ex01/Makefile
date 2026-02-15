@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/02/14 18:23:55 by ghenriqu          #+#    #+#              #
-#    Updated: 2026/02/15 17:41:28 by ghenriqu         ###   ########.fr        #
+#    Created: 2026/02/15 17:49:42 by ghenriqu          #+#    #+#              #
+#    Updated: 2026/02/15 17:51:22 by ghenriqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # program name
 NAME = fixed
 
-SRC = 		main.cpp \
+SRC =		main.cpp \
 			Fixed.cpp
 HEADERS =	Fixed.hpp
 
