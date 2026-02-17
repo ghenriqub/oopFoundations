@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/15 18:40:58 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/02/16 20:20:17 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/02/17 17:36:12 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ class Fixed {
         bool operator==(Fixed const &copy) const;
         bool operator!=(Fixed const &copy) const;
 
-        Fixed operator++(void);
-        Fixed operator--(void);
+        Fixed &operator++(void);
+        Fixed &operator--(void);
         Fixed operator++(int a);
         Fixed operator--(int a);
 

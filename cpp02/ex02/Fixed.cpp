@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/15 18:40:44 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/02/17 15:31:08 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/02/17 17:41:32 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,12 +83,12 @@ bool    Fixed::operator!=(Fixed const &copy) const {
 
 // increment operators
 
-Fixed   Fixed::operator++(void) {
+Fixed   &Fixed::operator++(void) {
     this->_value++;
     return (*this);
 }
 
-Fixed   Fixed::operator--(void) {
+Fixed   &Fixed::operator--(void) {
     this->_value--;
     return (*this);
 }
@@ -112,6 +112,14 @@ Fixed   &Fixed::min(Fixed &a, Fixed &b) {
 }
 
 Fixed   &Fixed::max(Fixed &a, Fixed &b) {
+    return (a > b ? a : b);
+}
+
+Fixed const &Fixed::min(Fixed const &a, Fixed const &b) {
+    return (a > b ? b : a);
+}
+
+Fixed const &Fixed::max(Fixed const &a, Fixed const &b) {
     return (a > b ? a : b);
 }
 
