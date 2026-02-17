@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/15 17:52:56 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/02/15 18:31:12 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/02/16 18:56:19 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Fixed::Fixed() {
     std::cout << "Default constructor called" << std::endl;
-    this->value = 0;
+    this->_value = 0;
 }
 
 Fixed::Fixed(Fixed const &copy) {
@@ -32,7 +32,7 @@ Fixed::Fixed(float const value) {
     this->_value = roundf(value * (1 << Fixed::_bits));
 }
 
-Fixed::~Fixed {
+Fixed::~Fixed() {
     std::cout << "Destructor called" << std::endl;
 }
 
