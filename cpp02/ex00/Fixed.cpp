@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 18:23:36 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/02/15 17:29:42 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/02/17 17:33:00 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Fixed::Fixed() {
     return ;
 }
 
-Fixed::Fixed(Fixed &copy) {
+Fixed::Fixed(Fixed const &copy) {
     std::cout << "Copy constructor called" << std::endl;
     *this = copy;
     return ;

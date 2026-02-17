@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/15 14:27:06 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/02/15 15:15:48 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/02/17 17:32:14 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	Fixed {
 
     public:
         Fixed();
-        Fixed(Fixed &copy);
+        Fixed(Fixed const &copy);
         ~Fixed();
 
         Fixed &operator=(Fixed const &copy);
