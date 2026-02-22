@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 19:05:27 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/02/22 20:20:47 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/02/22 20:32:37 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,7 @@ ScavTrap::~ScavTrap(void) {
 ScavTrap    &ScavTrap::operator=(ScavTrap const &copy) {
     if (this == &copy)
         return (*this);
-    this->_name = copy.getName();
-    this->_hitPoints = copy.getHitPoints();
-    this->_energyPoints = copy.getEnergyPoints();
-    this->_attackDamage = copy.getAttackDamage();
+    ClapTrap::operator=(copy);
     return(*this);
 }
 
