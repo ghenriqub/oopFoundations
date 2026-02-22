@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 20:43:48 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/02/22 19:29:45 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/02/22 20:20:41 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class   ClapTrap {
         void        attack(const std::string& target);
         void        takeDamage(unsigned int amount);
         void        beRepaired(unsigned int amount);
-        bool        isGameOver(void);
+        bool        isGameOver(void) const;
 };
 
 std::ostream    &operator<<(std::ostream &out, ClapTrap const &trap);

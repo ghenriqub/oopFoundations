@@ -6,11 +6,11 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 20:43:28 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/02/22 19:43:32 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/02/22 20:09:13 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 void    pressEnter(void) {
     std::cout << std::endl << "press ENTER to continue" << std::endl;

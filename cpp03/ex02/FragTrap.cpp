@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 19:49:59 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/02/22 20:03:38 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/02/22 20:11:35 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void    FragTrap::attack(std::string const &target) {
 	this->_energyPoints--;
 }
 
-void    highFiveGuys(void) {
+void    FragTrap::highFiveGuys(void) {
     std::cout << "FragTrap " << this->_name << " high five everyone!" << std::endl;
 }
 

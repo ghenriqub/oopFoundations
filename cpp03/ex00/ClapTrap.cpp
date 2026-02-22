@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 20:43:39 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/02/22 18:43:40 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/02/22 20:20:56 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int			ClapTrap::getAttackDamage(void) const {return (this->_attackDamage);}
 
 // member functions
 
-bool    ClapTrap::isGameOver(void) {
+bool    ClapTrap::isGameOver(void) const {
     if (!this->_energyPoints || !this->_hitPoints) {
         std::cout << "ClapTrap " << this->_name << " is out of action!" << std::endl;
         return (true);
@@ -73,9 +73,10 @@ void    ClapTrap::attack(const std::string& target) {
 }
 
 void    ClapTrap::takeDamage(unsigned int amount) {
-    this->_hitPoints -= amount;
-    if (this->_hitPoints < 0)
+    if ((unsigned int)this->_hitPoints <= amount)
         this->_hitPoints = 0;
+    else
+        this->_hitPoints -= (int)amount;
     std::cout << "ClapTrap " << this->_name << " is attacked with " << amount << " HP!" << std::endl;
 }
 
