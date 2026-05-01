@@ -1,0 +1,45 @@
+Valor: 42.625
+Binary: [parte inteira: 24 bits][parte fracionária: 8 bits]
+        00000000000000000010101010100000
+        |---- 42 -----||- 0.625 (160/256) -|
+        
+        42 * 256 = 10752
+        .0625 * 256 = 160
+        
+        Fixed Point = 10912
+        
+        precisao e de 1/256 = 0.00390625
+        
+INT
+Fixed::Fixed(const int n) : _value(n << _fractionalBits) {
+    std::cout << "Int constructor called" << std::endl;
+}
+```
+
+**Propósito**: Converte `int` → `fixed-point`.
+
+**Matemática**: 
+```
+n = 42
+_value = 42 << 8  (shift left por 8 bits)
+       = 42 * 256
+       = 10752
+```
+
+FLOAT
+Fixed::Fixed(const float f) : _value(roundf(f * (1 << _fractionalBits))) {
+    std::cout << "Float constructor called" << std::endl;
+}
+```
+
+**Propósito**: Converte `float` → `fixed-point`.
+
+**Matemática**:
+```
+f = 42.42
+(1 << 8) = 256
+f * 256 = 10859.52
+roundf(10859.52) = 10860
+_value = 10860
+```
+
