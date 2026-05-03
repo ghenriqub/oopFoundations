@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:03:21 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:03:23 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 18:33:41 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ class Animal
 		Animal& operator=(const Animal& other);
 		virtual ~Animal(); 
 		
-		virtual void	makeSound() const = 0; // pure virtual function, makes Animal an abstract class
+		virtual void	makeSound() const = 0;
+
 		std::string	getType() const;
 };
 
