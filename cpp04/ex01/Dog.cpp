@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:02:02 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:02:05 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 18:30:18 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ Dog::~Dog() {
 	std::cout << "Dog destructor called" << std::endl;
 }
 
-Dog& Dog::operator=(const Dog& other)
-{
+Dog& Dog::operator=(const Dog& other) {
 	std::cout << "Dog copy assignment operator called" << std::endl;
 	if (this != &other) {
 		Animal::operator=(other);
@@ -41,12 +40,10 @@ Dog& Dog::operator=(const Dog& other)
 	return *this;
 }
 
-void	Dog::makeSound(void) const
-{
+void	Dog::makeSound(void) const {
 	std::cout << "Woof woof" << std::endl;
 }
 
-Brain* Dog::getBrain() const
-{
+Brain* Dog::getBrain() const {
 	return this->_brain;
 }

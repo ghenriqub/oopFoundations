@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:01:10 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:01:12 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 18:29:48 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 # include <string>
 # include <iostream>
 
-class Brain
-{
+class Brain {
 	private:
 		std::string _ideas[100];
 	public:

@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 17:59:21 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 17:59:24 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 18:31:28 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 #include "Animal.hpp"
 
-class Cat : public Animal
-{
+class Cat : public Animal {
 	private:
 
 	public:

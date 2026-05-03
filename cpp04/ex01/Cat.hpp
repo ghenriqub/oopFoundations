@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:01:53 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:01:56 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 18:30:05 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal
-{
+class Cat : public Animal {
 	private:
 		Brain* _brain;
 	public:

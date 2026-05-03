@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/16 12:29:19 by nogioni-          #+#    #+#             */
-/*   Updated: 2026/05/01 10:18:46 by ghenriqu         ###   ########.fr       */
+/*   Created: 2026/05/03 18:25:51 by ghenriqu          #+#    #+#             */
+/*   Updated: 2026/05/03 18:31:12 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 #include "Animal.hpp"
 
-class Dog : public Animal
-{
+class Dog : public Animal {
 	private:
 
 	public:
