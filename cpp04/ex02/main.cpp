@@ -6,9 +6,13 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:04:26 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 19:00:21 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:26:05 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Proves abstraction works: only creates Cat/Dog (no Animal). Tests WrongAnimal
+// static binding again, then deep-copy test with Cat to confirm brain
+// independence persists.
 
 #include "Animal.hpp"
 #include "Dog.hpp"

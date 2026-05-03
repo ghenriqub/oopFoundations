@@ -6,9 +6,13 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:00:08 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:00:12 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:20:06 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Inherits from WrongAnimal and overrides makeSound(), but the override is
+// invisible through a WrongAnimal* pointer because there's no vtable lookup —
+// static binding wins.
 
 #include "WrongCat.hpp"
 

@@ -6,9 +6,13 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 17:58:49 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:33:36 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:21:16 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// ex00/main.cpp — Creates Animal/Dog/Cat via base pointers, calls makeSound()
+// to show polymorphism working. Then repeats with WrongAnimal/WrongCat to show
+// it failing. Deletes everything to test virtual destructors.
 
 #include "Animal.hpp"
 #include "Dog.hpp"

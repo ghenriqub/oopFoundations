@@ -6,9 +6,13 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 10:11:59 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:31:52 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:14:57 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Implements Orthodox Canonical Form: default/copy constructors, destructor,
+// and operator=. makeSound and getType provide default behavior that derived
+// classes override.
 
 #include "Animal.hpp"
 

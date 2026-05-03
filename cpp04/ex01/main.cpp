@@ -6,9 +6,13 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:02:21 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:33:37 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:24:20 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Creates array of 5 Dogs + 5 Cats as Animal*, deletes all (tests virtual
+// destructor chain). Then deep-copy tests: copies a Dog, mutates original's
+// brain, confirms copy is independent.
 
 #include "Animal.hpp"
 #include "Dog.hpp"

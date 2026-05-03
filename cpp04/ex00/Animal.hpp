@@ -6,9 +6,13 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 17:59:00 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:31:40 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:18:53 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Declares the base class with protected type, virtual destructor and virtual
+// makeSound(). These two virtual keywords enable polymorphism and safe delete
+// through base pointers.
 
 #ifndef ANIMAL_HPP
 #define ANIMAL_HPP
@@ -26,7 +30,6 @@ class Animal {
 		virtual ~Animal();
 		
 		virtual void	makeSound() const;
-
 		std::string	getType() const;
 };
 

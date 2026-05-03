@@ -6,9 +6,13 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 17:59:51 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 17:59:55 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:19:04 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Identical to Animal except makeSound() is NOT virtual (no dynamic dispatch).
+// Exists as a counter-example to prove that without virtual, the base version
+// always runs.
 
 #include "WrongAnimal.hpp"
 

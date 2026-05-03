@@ -6,9 +6,13 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:03:09 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 19:01:08 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:25:32 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Removes makeSound() implementation since it's pure virtual now. Keeps
+// constructor/destructor/operator= because derived classes still chain up to
+// them during construction.
 
 #include "Animal.hpp"
 

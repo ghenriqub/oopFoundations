@@ -6,9 +6,13 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:02:10 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:33:38 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:23:56 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Mirror of Cat's brain management: new Brain() in constructor,
+// new Brain(*other._brain) in copy, delete _brain in destructor. Both classes
+// follow identical resource management patterns.
 
 #ifndef DOG_HPP
 #define DOG_HPP

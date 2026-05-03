@@ -6,9 +6,13 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:01:26 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:33:33 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:23:09 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Now owns a Brain* allocated with new. Copy constructor deep-copies the brain,
+// operator= deletes old brain before allocating new one. Destructor frees the
+// brain to prevent leaks.
 
 #include "Cat.hpp"
 

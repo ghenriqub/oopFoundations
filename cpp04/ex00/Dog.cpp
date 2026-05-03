@@ -6,9 +6,13 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 17:59:32 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:33:22 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:15:53 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Inherits from Animal, sets type = "Dog", overrides makeSound() with "Woof".
+// Copy assignment delegates to Animal::operator= so the base type field is
+// properly copied.
 
 #include "Dog.hpp"
 
