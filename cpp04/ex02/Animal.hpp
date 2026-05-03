@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:03:21 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:33:41 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:00:23 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 #include <string>
 #include <iostream>
 
-class Animal
-{
+class Animal {
 	protected:
 		std::string type;
 	public:

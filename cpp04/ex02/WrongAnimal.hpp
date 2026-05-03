@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 18:04:51 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/05/03 18:04:52 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/05/03 19:00:22 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define WRONGANIMAL_HPP
 
 #include <iostream>
+#include <string>
 
 class WrongAnimal {
 	protected:
