@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 14:51:49 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/08/15 16:09:26 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/09/19 13:14:46 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Form::Form(std::string name, int grade_to_sign, int grade_to_execute) : _name(na
 	return ;
 }
 
-Form::Form(const Form &source) : _name(source._name), _grade_to_sign(source._grade_to_sign), _grade_to_execute(source._grade_to_execute) {
+Form::Form(const Form &source) : _name(source._name), _signed(source._signed), _grade_to_sign(source._grade_to_sign), _grade_to_execute(source._grade_to_execute) {
 	*this = source;
 	return ;
 }
