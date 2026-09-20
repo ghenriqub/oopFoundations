@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/19 17:24:20 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/09/19 17:26:59 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/09/20 14:04:29 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static bool parseInt(const std::string &s, double &d)
 	long v = std::strtol(s.c_str(), &end, 10);
 	if (*end != '\0' || errno == ERANGE || v < INT_MIN || v > INT_MAX)
 		return false;
-	d = static_cast<int>(v);
+	d = static_cast<double>(static_cast<int>(v));
 	return true;
 }
 
@@ -79,7 +79,7 @@ static bool parseFloat(const std::string &s, double &d)
 		return false;
 	if (!parseDouble(s.substr(0, s.length() - 1), d) || d > FLT_MAX || d < -FLT_MAX)
 		return false;
-	d = static_cast<float>(d);	// passa pelo tipo real (perde precisão como um float perderia)
+	d = static_cast<double>(static_cast<float>(d));
 	return true;
 }
 
@@ -138,7 +138,7 @@ static void printFloat(double d)
 	if (finite && (d > FLT_MAX || d < -FLT_MAX))
 		std::cout << "impossible";
 	else
-		std::cout << fmt(static_cast<float>(d)) << "f";
+		std::cout << fmt(static_cast<double>(static_cast<float>(d))) << "f";
 	std::cout << std::endl;
 }
 
