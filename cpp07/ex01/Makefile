@@ -6,11 +6,11 @@
 #    By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/25 16:58:49 by ghenriqu          #+#    #+#              #
-#    Updated: 2026/09/25 16:58:59 by ghenriqu         ###   ########.fr        #
+#    Updated: 2026/09/26 18:02:52 by ghenriqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= identify
+NAME		= iter
 
 OBJ_PATH	=./obj/
 
@@ -19,8 +19,7 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 RM			= rm -rf
 
-SRC 		=	main.cpp \
-				Base.cpp
+SRC 		=	main.cpp
 
 OBJ 		= $(addprefix $(OBJ_PATH), $(notdir $(SRC:.cpp=.o)))
 DEP 		= $(OBJ:.o=.d)

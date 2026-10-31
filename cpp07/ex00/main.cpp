@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 16:59:40 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/09/25 17:02:03 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/09/26 18:04:26 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,10 @@ int main(void) {
     std::string c = "chaine1";
     std::string d = "chaine2";
 
-    
+	::swap(c, d);
+	std::cout << "c = " << c << ", d = " << d << std::endl;
+	std::cout << "min( c, d ) = " << ::min(c, d) << std::endl;
+	std::cout << "max( c, d ) = " << ::max(c, d) << std::endl;
+
+	return 0;
 }
