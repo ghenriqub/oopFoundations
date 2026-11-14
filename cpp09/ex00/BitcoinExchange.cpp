@@ -6,7 +6,7 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 16:48:40 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/11/14 15:32:32 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/11/14 19:09:34 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
+#include <iomanip>
 #include <stdexcept>
 
 /* ------------------------- Orthodox Canonical Form ------------------------ */
@@ -176,7 +177,7 @@ void	BitcoinExchange::processLine(const std::string &line) const
 		return ;
 	}
 	if (value > 1000) {
-		std::cerr << "Error: too large number." << std::endl;
+		std::cerr << "Error: too large a number." << std::endl;
 		return ;
 	}
 
@@ -187,5 +188,7 @@ void	BitcoinExchange::processLine(const std::string &line) const
 		return ;
 	}
 	--it;
-	std::cout << date << " => " << value << " = " << value * it->second << std::endl;
+
+	std::cout << std::setprecision(10)
+			<< date << " => " << value << " = " << value * it->second << std::endl;
 }

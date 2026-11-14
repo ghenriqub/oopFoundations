@@ -6,15 +6,15 @@
 /*   By: ghenriqu <ghenriqu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 16:48:47 by ghenriqu          #+#    #+#             */
-/*   Updated: 2026/11/07 16:52:08 by ghenriqu         ###   ########.fr       */
+/*   Updated: 2026/11/14 18:10:43 by ghenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BITCOINEXCHANGE_HPP
-#define BITCOINEXCHANGE_HPP
+# define BITCOINEXCHANGE_HPP
 
-#include <map>
-#include <string>
+# include <map>
+# include <string>
 
 class BitcoinExchange {
 	public:
